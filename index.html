@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Validation Test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <!-- this wrapper will contain the main content of the page (header/body) -->
+    <div class="wrapper" id="page-wrapper">
+        <header>
+            <h1>Form Validation Test</h1>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </header>
+        <!-- this will be the main container for the page -->
+        <div class="container">
+            <div class="row">
+                <h2 id="infoHeading">Sign-Up Form</h2>
+            </div>
+            <div class="card surveyBlock">
+                <h5 class="card-header">User Information</h5>
+                <div class="card-body">
+                    <!-- User inputs go here----------------------------->
+                    <!-- first name and last name -->
+                    <form action="../public/js/style.js" name="signUp" id="singUpForm">
+                        <h4>Full Name</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                <h6>First Name</h6>
+                            </div>
+                            <div class="col-6">
+                                <h6>Last Name</h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <input id="form-firstname" class="form-control" type="text" name="firstname"
+                                    placeholder="" />
+                                <span class="error-form" id="firstname-error"></span>
+                            </div>
+                            <div class="col-6">
+                                <input id="form-lastname" class="form-control" type="text" name="lastname"
+                                    placeholder="" />
+                                <span class="error-form" id="lastname-error"></span>
+                            </div>
+                        </div>
+                        <br />
+                        <!-- Age and location -->
+                        <h4>User Info</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                <h6>Age</h6>
+                            </div>
+                            <div class="col-6">
+                                <h6>Location (city)</h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <input id="form-age" class="form-control" type="number" name="age" min="18" max="112"
+                                    placeholder="(must be at least 18 years-old)" />
+                                <span class="error-form" id="age-error"></span>
+                            </div>
+                            <div class="col-6">
+                                <input id="form-locale" class="form-control" type="text" name="locale"
+                                    placeholder="San Francisco" />
+                                <span class="error-form" id="locale-error"></span>
+                            </div>
+                        </div>
+                        <br />
+                        <!-- Username/password -->
+                        <div class="row">
+                            <div class="col-6">
+                                <h6>Username</h6>
+                            </div>
+                            <div class="col-6">
+                                <h6>Email</h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <input id="form-screenname" class="form-control" min="6" type="text" name="screenname"
+                                    placeholder="Username (must be at least 6 characters long)" />
+                                <span class="error-form" id="screenname-error"></span>
+                            </div>
+                            <div class="col-6">
+                                <input id="form-email" class="form-control" type="email" min="6" name="email"
+                                    placeholder="john@mymail.com (must be at least 6 characters long)" />
+                                <span class="error-form" id="email-error"></span>
+                            </div>
+                        </div>
+                        <br />
+                        <h4>Password</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                <h6>Type Once</h6>
+                            </div>
+                            <div class="col-6">
+                                <h6>Re-Type</h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <input id="formPassword1" class="form-control" type="password" name="password1"
+                                    placeholder="(must be at least 6 characters long)" />
+                                <span class="error-form" id="formPassword1-error"></span>
+                            </div>
+                            <div class="col-6">
+                                <input id="formPassword2" class="form-control" type="password" name="password2"
+                                    placeholder="" />
+                                <span class="error-form" id="formPassword2-error"></span>
+                            </div>
+                        </div>
+                        <br />
+                        <!-- this is the profile pic -->
+                        <h4>Profile Image Upload</h4>
+                        <div class="form-group" id="form-picture" formtarget="/api/users/uploadprofilepic">
+                            <form action="/api/uploadfile" enctype="multipart/form-data" method="POST"
+                                id="upload-picture" formtarget="/api/uploadfile">
+                                <input type="file" name="myFile" id="survey-picture" />
+                                <input type="submit" value="Upload Image" name="submit" />
+                            </form>
+                        </div>
+                        <br />
+                        <!-- Bio section -->
+                        <h4>Bio</h4>
+                        <textarea id="form-bio" class="form-control" rows="4" cols=""
+                            placeholder="Write a brief bio about yourself."></textarea>
+                        <span class="error-form" id="bio-error"></span>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <!-- end of main content of page -->
+    </div>
+    <footer>
+        <h4>Form Validation Test &copy; 2019</h4>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
