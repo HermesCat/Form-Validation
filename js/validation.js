@@ -113,7 +113,7 @@ $(function () {
         var screenname_length = $("#form-screenname").val().length;
 
         if (screenname_length < 6 || screenname_length > 20) {
-            $("#screenname-error").html("*Must be between 1-20 characters.");
+            $("#screenname-error").html("*Must be between 6-20 characters.");
             $("#screenname-error").show();
             error_screenname = true;
         } else {
@@ -139,7 +139,7 @@ $(function () {
         var password1_length = $("#formPassword1").val().length;
 
         if (password1_length < 6 || password1_length > 22) {
-            $("#formPassword1-error").html("*Must be between 1-20 characters.");
+            $("#formPassword1-error").html("*Must be between 6-20 characters.");
             $("#formPassword1-error").show();
             error_password1 = true;
         } else {
