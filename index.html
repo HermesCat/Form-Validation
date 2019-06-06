@@ -8,6 +8,7 @@
     <title>Form Validation Test</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -15,7 +16,9 @@
     <!-- this wrapper will contain the main content of the page (header/body) -->
     <div class="wrapper" id="page-wrapper">
         <header>
-            <h1>Form Validation Test</h1>
+            <h1 id="main-title">
+                <span class="hot">Form Validation</span> Test
+            </h1>
             <ul class="nav justify-content-center">
                 <li class="nav-item">
                     <a class="nav-link active" href="#">Home</a>
@@ -30,15 +33,12 @@
         </header>
         <!-- this will be the main container for the page -->
         <div class="container">
-            <div class="row">
-                <h2 id="infoHeading">Sign-Up Form</h2>
-            </div>
-            <div class="card surveyBlock">
+            <div class="card survey-block">
                 <h5 class="card-header">User Information</h5>
-                <div class="card-body">
+                <div class="card-body" id="main-form">
                     <!-- User inputs go here----------------------------->
                     <!-- first name and last name -->
-                    <form action="../public/js/style.js" name="signUp" id="singUpForm">
+                    <form action="js/validation.js" name="signUp" id="singUpForm">
                         <h4>Full Name</h4>
                         <div class="row">
                             <div class="col-6">
@@ -74,12 +74,11 @@
                         <div class="row">
                             <div class="col-6">
                                 <input id="form-age" class="form-control" type="number" name="age" min="18" max="112"
-                                    placeholder="(must be at least 18 years-old)" />
+                                    placeholder="" />
                                 <span class="error-form" id="age-error"></span>
                             </div>
                             <div class="col-6">
-                                <input id="form-locale" class="form-control" type="text" name="locale"
-                                    placeholder="San Francisco" />
+                                <input id="form-locale" class="form-control" type="text" name="locale" placeholder="" />
                                 <span class="error-form" id="locale-error"></span>
                             </div>
                         </div>
@@ -96,12 +95,12 @@
                         <div class="row">
                             <div class="col-6">
                                 <input id="form-screenname" class="form-control" min="6" type="text" name="screenname"
-                                    placeholder="Username (must be at least 6 characters long)" />
+                                    placeholder="" />
                                 <span class="error-form" id="screenname-error"></span>
                             </div>
                             <div class="col-6">
                                 <input id="form-email" class="form-control" type="email" min="6" name="email"
-                                    placeholder="john@mymail.com (must be at least 6 characters long)" />
+                                    placeholder="" />
                                 <span class="error-form" id="email-error"></span>
                             </div>
                         </div>
@@ -118,7 +117,7 @@
                         <div class="row">
                             <div class="col-6">
                                 <input id="formPassword1" class="form-control" type="password" name="password1"
-                                    placeholder="(must be at least 6 characters long)" />
+                                    placeholder="" />
                                 <span class="error-form" id="formPassword1-error"></span>
                             </div>
                             <div class="col-6">
@@ -129,7 +128,7 @@
                         </div>
                         <br />
                         <!-- this is the profile pic -->
-                        <h4>Profile Image Upload</h4>
+                        <!-- <h4>Profile Image Upload</h4>
                         <div class="form-group" id="form-picture" formtarget="/api/users/uploadprofilepic">
                             <form action="/api/uploadfile" enctype="multipart/form-data" method="POST"
                                 id="upload-picture" formtarget="/api/uploadfile">
@@ -137,12 +136,13 @@
                                 <input type="submit" value="Upload Image" name="submit" />
                             </form>
                         </div>
-                        <br />
+                        <br /> -->
                         <!-- Bio section -->
                         <h4>Bio</h4>
-                        <textarea id="form-bio" class="form-control" rows="4" cols=""
-                            placeholder="Write a brief bio about yourself."></textarea>
+                        <textarea id="form-bio" class="form-control" rows="4" cols="" placeholder=""></textarea>
                         <span class="error-form" id="bio-error"></span>
+
+                        <button id="submit">Submit</button>
                 </div>
             </div>
 
