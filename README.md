@@ -13,5 +13,5 @@ This form validation checks for:
 
 ![passwordValidation](https://user-images.githubusercontent.com/46881872/62017278-0c335180-b184-11e9-9124-97db4bb435ba.png)
 
-Normally, this information would be pushed to the backend or a url, but for this demonstration the information is being pushed to a front-end modal. For your own projects, change the action attribute in the form element (<form action="[your url here]">), and remove all of the modal content from this page. 
+Normally, this information would be pushed to the backend or a url, but for this demonstration the information is being pushed to a front-end modal. For your own projects, change the #action attribute in the form element and remove all of the modal content from this page. 
 
