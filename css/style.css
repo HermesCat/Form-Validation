@@ -25,7 +25,7 @@
   
   footer {
     background-image: linear-gradient(#51d0de, #2eb3c2);
-    color: white;
+    color: rgb(241, 234, 234);
     margin: 0;
     padding: 0;
     text-align: center;
@@ -51,7 +51,7 @@
   }
   
   h1 {
-      color: #ffffff;
+      color: #f0e7e7;
       text-align: center;
       padding-top: 13px;
       font-family: 'Archivo Black', sans-serif;
@@ -98,6 +98,41 @@
     font-weight: bold;
   }
 
+  .modal-header {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(#51d0de, #2eb3c2);
+    font-size: 28px;
+    color: #f0e7e7;
+    border-bottom: 5px solid;
+    border-color: #bf4aa8;
+    padding: 12px;
+  }
+
+  .modal-footer {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(#51d0de, #2eb3c2);
+    border-top: 5px solid;
+    border-color: #bf4aa8;
+    padding: 12px;
+  }
+
+  .modal-close {
+    border: none;
+    width: auto;
+    text-decoration: none;
+    background-image: linear-gradient(#bf4aa8, #ad4198);
+    padding: 6px;
+    border-radius: .2em;
+    color: #ddd4d4;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .modal-body {
+    background: rgb(223, 219, 219);
+  }
   
   @media only screen and (max-width: 1000px) {
     .form-control {

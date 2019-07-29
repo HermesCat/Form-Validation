@@ -222,6 +222,7 @@ $(function () {
             var userLocale = $("#form-locale").val().trim();
             var userScreenname = $("#form-screenname").val().trim();
             var userBio = $("#form-bio").val().trim();
+            $("#modalBody").html('');
             $("#modalBody").append(
                 `<h5>Normally this information would be posted to the backend, but 
                 let's test to see if we have the correct information. </h5>
