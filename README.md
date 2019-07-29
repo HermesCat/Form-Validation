@@ -7,6 +7,7 @@ https://hermescat.github.io/Form-Validation/
 
 ![ageValidation](https://user-images.githubusercontent.com/46881872/62017191-b9599a00-b183-11e9-9275-2cdac81b93cb.png)
 
-![passwordValidation](https://user-images.githubusercontent.com/46881872/62017193-bb235d80-b183-11e9-894f-677202fea182.png)
+![passwordValidation](https://user-images.githubusercontent.com/46881872/62017278-0c335180-b184-11e9-9124-97db4bb435ba.png)
+
 
 
