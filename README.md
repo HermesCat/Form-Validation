@@ -1,4 +1,4 @@
-#![formValidation](https://user-images.githubusercontent.com/46881872/62017187-b494e600-b183-11e9-9527-7b1fe7a2a1a1.png)
+![formValidation](https://user-images.githubusercontent.com/46881872/62017187-b494e600-b183-11e9-9527-7b1fe7a2a1a1.png)
 
 This is a basic jQuery form validation page. The validation is front-end only, and uses .focusOut events to verify input fields. 
 
