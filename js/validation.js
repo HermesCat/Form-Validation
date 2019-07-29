@@ -23,7 +23,7 @@ $(function () {
     var error_locale = false;
     var error_bio = false;
 
-    // these.on(mouseleave) functions shouls trigger when a user moves their
+    // these.on(focusout) functions shouls trigger when a user moves their
     // mouse out of the input
     $("#form-firstname").focusout(function () {
         check_firstname();
@@ -113,7 +113,7 @@ $(function () {
         var screenname_length = $("#form-screenname").val().length;
 
         if (screenname_length < 6 || screenname_length > 20) {
-            $("#screenname-error").html("*Must be between 1-20 characters.");
+            $("#screenname-error").html("*Must be between 6-20 characters.");
             $("#screenname-error").show();
             error_screenname = true;
         } else {
@@ -139,7 +139,7 @@ $(function () {
         var password1_length = $("#formPassword1").val().length;
 
         if (password1_length < 6 || password1_length > 22) {
-            $("#formPassword1-error").html("*Must be between 1-20 characters.");
+            $("#formPassword1-error").html("*Must be between 6-20 characters.");
             $("#formPassword1-error").show();
             error_password1 = true;
         } else {
@@ -161,8 +161,6 @@ $(function () {
         }
     }
 
-
-
     function check_bio() {
         var bio_length = $("#form-bio").val().length;
 
@@ -175,7 +173,20 @@ $(function () {
         }
     }
 
-    $("#singUpForm").submit(function () {
+    // This function will handle displaying VALID user info after
+    // they hit submit
+    // function displayInput(isValid) {
+    //     if (isValid === true) {
+    //         $("#submitModal").on('show.bs.modal');
+    //         $("modal-body").append(
+    //             `<h3>Works</h3>`
+    //         );
+    //     } else {
+    //         return false;
+    //     }
+    // }
+
+    $("#singUpForm").submit(function (e) {
         error_firstname = false;
         error_lastname = false;
         error_age = false;
@@ -195,7 +206,6 @@ $(function () {
         check_locale();
         check_age();
         check_screenname();
-
         if (
             error_firstname == false &&
             error_lastname == false &&
@@ -206,11 +216,33 @@ $(function () {
             error_email == false &&
             error_locale == false &&
             error_bio == false) {
+            var userFirstname = $("#form-firstname").val().trim();
+            var userLastname = $("#form-lastname").val().trim();
+            var userAge = $("#form-age").val().trim();
+            var userLocale = $("#form-locale").val().trim();
+            var userScreenname = $("#form-screenname").val().trim();
+            var userBio = $("#form-bio").val().trim();
+            $("#modalBody").html('');
+            $("#modalBody").append(
+                `<h5>Normally this information would be posted to the backend, but 
+                let's test to see if we have the correct information. </h5>
+                <h3>Name: ${userFirstname} ${userLastname}</h3>
+                <h3>Screenname: ${userScreenname}</h3>
+                <h3>Age: ${userAge}</h3>
+                `
+            )
+            $('#inputModal').modal('show');
+            e.preventDefault();
             return true;
         } else {
+            console.log("is working");
             return false;
         }
 
     });
 
 });
+
+// $("#formReset").click(function () {
+//     $("#singUpForm").get(0).reset();
+// });

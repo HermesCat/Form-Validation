@@ -8,7 +8,7 @@
     <title>Form Validation Test</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Roboto+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -24,7 +24,7 @@
                     <a class="nav-link active" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
@@ -38,7 +38,7 @@
                 <div class="card-body" id="main-form">
                     <!-- User inputs go here----------------------------->
                     <!-- first name and last name -->
-                    <form action="js/validation.js" name="signUp" id="singUpForm">
+                    <form onsubmit="openModal()" target="_self" method="get" name="signUp" id="singUpForm">
                         <h4>Full Name</h4>
                         <div class="row">
                             <div class="col-6">
@@ -127,21 +127,37 @@
                             </div>
                         </div>
                         <br />
-                        <!-- this is the profile pic -->
-                        <!-- <h4>Profile Image Upload</h4>
-                        <div class="form-group" id="form-picture" formtarget="/api/users/uploadprofilepic">
-                            <form action="/api/uploadfile" enctype="multipart/form-data" method="POST"
-                                id="upload-picture" formtarget="/api/uploadfile">
-                                <input type="file" name="myFile" id="survey-picture" />
-                                <input type="submit" value="Upload Image" name="submit" />
-                            </form>
-                        </div>
-                        <br /> -->
                         <!-- Bio section -->
                         <h4>Bio</h4>
                         <textarea id="form-bio" class="form-control" rows="4" cols="" placeholder=""></textarea>
                         <span class="error-form" id="bio-error"></span>
-                        <div class="row"><button id="submit">Submit</button></div>
+                        <div class="row">
+                            <button id="submit" type="submit" value="Submit">Submit</button>
+                        </div>
+                        <!-- this is the modal, normally I would not put this here,
+                        but this will show example data -->
+                        <div class="modal fade" id="inputModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 id="main-title">
+                                            <span class="modal-title hot">Form Validation</span> Test
+                                        </h5>
+                                    </div>
+                                    <div class="modal-body" id="modalBody">
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <!-- This button will reset the page -->
+                                        <button onclick="this.form.reset();" class=" btn modal-close"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
                 </div>
             </div>
 

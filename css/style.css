@@ -12,30 +12,37 @@
   }
   
   #page-wrapper {
-    min-height: 94%;
-    padding-bottom: 10px;
+    min-height: 95%;
   }
 
   header {
+    margin: 0;
+    padding: 0;
     background-image: linear-gradient(#51d0de, #2eb3c2);
     border-bottom: 10px solid;
     border-color: #bf4aa8;
-    margin-bottom: 20px;
   }
   
   footer {
     background-image: linear-gradient(#51d0de, #2eb3c2);
-    color: white;
+    color: rgb(241, 234, 234);
+    margin: 0;
+    padding: 0;
     text-align: center;
     border-top: 10px solid;
     border-color: #bf4aa8;
-    height: 6%;
+    height: 5%;
     overflow: none;
   }
   
+  footer h4 {
+    margin: 0;
+    padding: 0;
+  }
+
   .nav-link {
-    font-size: 28px;
-    color:  #ddd4d4;
+    font-size: 26px;
+    color:  #ebeeee;
     font-family: 'Roboto Condensed', sans-serif;
   }
 
@@ -44,29 +51,35 @@
   }
   
   h1 {
-      color: #ffffff;
+      color: #f0e7e7;
       text-align: center;
+      padding-top: 13px;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 30px;
   }
 
   #page-wrapper {
     min-height: 95%;
-    padding-bottom: 10px;
   }
   
   .hot {
     color: #bf4aa8;
   }
 
+  .survey-block {
+    margin-top: 10px;
+  }
+
   #main-form {
-    background-image: linear-gradient(#ffffff, #d4dddd);
+    background-image: linear-gradient(#ffffff, #e5eeee);
   }
 
   .form-control {
-      font-size: 14px;
+      font-size: 18px;
   }
 
   .error-form {
-    font-size: 8px;
+    font-size: 18px;
     color: red;
   }
 
@@ -76,7 +89,6 @@
     overflow: visible;
     text-decoration: none;
     margin-top: 10px;
-    margin-bottom: 7px;
     margin-left: 16px;
     background-image: linear-gradient(#bf4aa8, #ad4198);
     padding: 8px;
@@ -84,4 +96,68 @@
     color: #ddd4d4;
     font-size: 20px;
     font-weight: bold;
+  }
+
+  .modal-header {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(#51d0de, #2eb3c2);
+    font-size: 28px;
+    color: #f0e7e7;
+    border-bottom: 5px solid;
+    border-color: #bf4aa8;
+    padding: 12px;
+  }
+
+  .modal-footer {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(#51d0de, #2eb3c2);
+    border-top: 5px solid;
+    border-color: #bf4aa8;
+    padding: 12px;
+  }
+
+  .modal-close {
+    border: none;
+    width: auto;
+    text-decoration: none;
+    background-image: linear-gradient(#bf4aa8, #ad4198);
+    padding: 6px;
+    border-radius: .2em;
+    color: #ddd4d4;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .modal-body {
+    background: rgb(223, 219, 219);
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    .form-control {
+        font-size: 24px;
+    }
+  
+    .error-form {
+      font-size: 20px;
+      color: red;
+    }
+    h1 {
+        font-size: 38px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .form-control {
+        font-size: 22px;
+    }
+  
+    .error-form {
+      font-size: 18px;
+      color: red;
+    }
+    h1 {
+        font-size: 35px;
+    }
   }
